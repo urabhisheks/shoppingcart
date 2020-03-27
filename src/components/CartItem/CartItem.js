@@ -6,6 +6,7 @@ import classes from './CartItem.module.css';
 const CheckoutItem = ({cartItem, addItem ,clearItemFromCart, removeItem}) => {
   const {name, img_url, price, quantity, discount} = cartItem;
   const discountedPrice = Math.floor(price*((100-discount)/100));
+  console.log('CheckoutItem');
   return (
     
     <div className={classes.checkoutitem}>
