@@ -39,10 +39,6 @@ const Cart = props => {
         </div>
       </div>:''}
     </div>
-    // <div className={classes.priceDetails}>
-    //   <h1>PRRICE</h1>
-    // </div>
-    // </>
   )
 };
 

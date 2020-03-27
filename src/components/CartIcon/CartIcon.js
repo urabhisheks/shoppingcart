@@ -11,8 +11,6 @@ const CartIcon = ({itemCount, toggleCartHidden}) => {
 
   return(
     <div className={classes.Carticon} onClick={toggleCartHidden}>
-      {/* <ShoppingIcon className='shopping-icon'/> */}
-      {/* <FontAwesomeIcon style={{marginRight: '10px'}} icon={faSearch} /> */}
       <Search />
       <Link to= '/cart' className={classes.Carticon}>
         <FontAwesomeIcon icon={faShoppingCart} />
@@ -23,7 +21,6 @@ const CartIcon = ({itemCount, toggleCartHidden}) => {
 }
 
 const mapStateToProps = ({cart})=>({
-  // itemCount: cartItems.reduce((quantity, cartItem) => quantity+ cartItem.quantity, 0)
   itemCount: cart.quantity
 });
 
