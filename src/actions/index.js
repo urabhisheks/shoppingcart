@@ -45,3 +45,9 @@ export const apiData = payload => ({
   type:actions.API_DATA,
   payload
 });
+
+export const applyFilter = (min, max) => ({
+  type: actions.APPLY_FILTER,
+  min,
+  max,
+});

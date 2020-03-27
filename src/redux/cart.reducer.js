@@ -1,5 +1,6 @@
 import {ADD_ITEM, TOGGLE_CART_HIDDEN, CLEAR_ITEM_FROM_CART, REMOVE_ITEM, 
-  SORT_BY_PRICE_ASC, SORT_BY_PRICE_DESC, SORT_BY_PRICE_DISCOUNT, API_DATA, SEARCH_BY_NAME} from '../actions/action.type';
+  SORT_BY_PRICE_ASC, SORT_BY_PRICE_DESC, SORT_BY_PRICE_DISCOUNT, API_DATA, SEARCH_BY_NAME,
+  APPLY_FILTER} from '../actions/action.type';
 import {addItemToCart, removeItemFromCart} from '../Utils/cart.utils';
 
 const INITITAL_STATE = {
@@ -11,12 +12,10 @@ const cartReducer = (state = INITITAL_STATE, action) =>{
   let data;
   switch(action.type){
     case ADD_ITEM:
-      // console.log('Item ', addItemToCart(state.cartItems, action.payload))
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
         quantity: (state.quantity || 0) +1,
-        // cartItems : [...state.cartItems, action.payload],
       };
     case TOGGLE_CART_HIDDEN:
       return {
@@ -48,7 +47,6 @@ const cartReducer = (state = INITITAL_STATE, action) =>{
       }
     case SORT_BY_PRICE_ASC:
       data = [...state.data];
-      // const discountedPrice = Math.floor(price*((100-discount)/100));
       data = data.map(value => {
         value.discountedPrice = Math.floor(value.price*((100-value.discount)/100))
         return value;
@@ -60,7 +58,6 @@ const cartReducer = (state = INITITAL_STATE, action) =>{
       }
     case SORT_BY_PRICE_DESC:
       data = [...state.data];
-      // const discountedPrice = Math.floor(price*((100-discount)/100));
       data = data.map(value => {
         value.discountedPrice = Math.floor(value.price*((100-value.discount)/100))
         return value;
@@ -92,6 +89,17 @@ const cartReducer = (state = INITITAL_STATE, action) =>{
       return{
         ...state,
         data: data,
+      };
+    case APPLY_FILTER:
+      data = [...state.originalValue];
+      data = data.map(value => {
+        value.discountedPrice = Math.floor(value.price*((100-value.discount)/100))
+        return value;
+      });
+      data = data.filter(value => value.discountedPrice>= action.min && value.discountedPrice <= action.max);
+      return{
+        ...state,
+        data,
       };
     default:
       return state;

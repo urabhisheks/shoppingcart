@@ -1,5 +1,12 @@
 .Content{
-  margin: 20px;
   margin-top: 72px;
   margin-bottom: 40px;
+}
+
+.applyBtn{
+  margin:20px 0px;
+  color: #fff;
+}
+.applyBtn button{
+background: #0000e6
 }
