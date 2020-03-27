@@ -11,13 +11,11 @@
   margin: 1%;
 }
 .moveleft{
-  /* float: left; */
   width: 48%;
   display: inline-block;
   
 }
 .moveright{
-  /* float: right; */
   width: 48%;
   display: inline-block;
 }
@@ -49,9 +47,5 @@ h4{
     float: none;
     width: 100%;
   }
-  /* .imagecontainer, .pair, .quantity{
-    width: auto;
-    display: block;
-  } */
 
 }

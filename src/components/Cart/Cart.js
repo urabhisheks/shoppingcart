@@ -8,7 +8,6 @@ const Cart = props => {
   const {cartItems} = props;
   let totalPrice =0
   let totalDiscountedPrice =0;
-  let totalDiscount = 0;
   cartItems.map(item=> {
     totalPrice += item.quantity * item.price;
     totalDiscountedPrice += item.quantity *Math.floor(item.price*((100-item.discount)/100));

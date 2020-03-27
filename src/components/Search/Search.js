@@ -20,17 +20,7 @@ class Search extends Component{
   }
   render() {
     const {isActive} = this.state;
-    // let  toRender = (<div onClick={this.handleClick}>
-      let  abcd = <FontAwesomeIcon style={{marginRight: '10px'}} icon={faSearch} />
-     {/* </div>); */}
-    
-    if(isActive) {
 
-    }
-    // <div><input type='text' /> </div>: 
-    //   <div onClick={this.handleClick}>
-    //     <FontAwesomeIcon style={{marginRight: '10px'}} icon={faSearch} />
-    //   </div>;
     return (
       <span>
       {!isActive && <FontAwesomeIcon style={{marginRight: '10px'}} icon={faSearch} onClick={this.handleClick}/>}

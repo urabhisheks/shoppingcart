@@ -10,10 +10,8 @@
 }
 
 .Filter:hover, .Filter:active {
-  /* background-color: #AC9980; */
   color: #0000e6;
   text-decoration: underline;
-  /* cursor: not-allowed; */
 }
 
 @media(max-width:499px){
