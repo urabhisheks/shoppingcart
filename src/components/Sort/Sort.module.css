@@ -1,0 +1,23 @@
+.Sort{
+  display: inline-block;
+}
+
+.Filter{
+  color: #9494b8;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.Filter:hover, .Filter:active {
+  /* background-color: #AC9980; */
+  color: #0000e6;
+  text-decoration: underline;
+  /* cursor: not-allowed; */
+}
+
+@media(max-width:499px){
+  .DesktopOnly{
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+.Category{
+  display: flex;
+  flex-direction: column;
+  /* margin: 20px; */
+  /* margin-top: 76px; */
+}
+  .Items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+  }
+
+  @media(max-width:499px){
+    .Items{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
