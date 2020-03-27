@@ -8,7 +8,7 @@ const Logo = props => (
 
   <div className={classes.Logo} >
     {/* <img src={burgerLogo} alt="MyBurger" /> */}
-    <Link to='/' className={classes.Logo}>
+    <Link to={process.env.PUBLIC_URL + '/'} className={classes.Logo}>
        <FontAwesomeIcon icon={faStar} />
       </Link>
   </div>
