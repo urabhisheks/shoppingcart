@@ -7,6 +7,7 @@ import Cart from './components/Cart/Cart';
 import './App.css';
 
 function App() {
+  console.log('URL ',process.env.PUBLIC_URL);
   return (
     <div>
         <Header />

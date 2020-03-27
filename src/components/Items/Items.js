@@ -16,7 +16,7 @@ class Items extends Component{
     axios.get(URL)
       .then(res => res.data)
       .then(data => {
-        console.log(data);
+        // console.log(data);
         this.setState({data});
         this.props.apiData(data);
       })
@@ -24,7 +24,7 @@ class Items extends Component{
   }
 
   render() {
-    console.log('data ', this.props.data)
+    // console.log('data ', this.props.data)
     const {data} = this.props 
     return (
       <div className={classes.Category}>

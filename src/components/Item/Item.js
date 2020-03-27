@@ -8,7 +8,7 @@ import {addItem} from '../../actions';
 
 const Item = ({addItem, item}) => {
   const {id, name, price, discount, img_url} = item;
-  console.log(id, name, price, discount, img_url);
+  // console.log(id, name, price, discount, img_url);
   const discountedPrice = Math.floor(price*((100-discount)/100));
   return(
     <div className={classes.Collection-item}>
