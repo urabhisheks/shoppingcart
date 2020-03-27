@@ -13,7 +13,6 @@ const Cart = props => {
     totalDiscountedPrice += item.quantity *Math.floor(item.price*((100-item.discount)/100));
   })
   return (
-    // <>
     <div className={classes.Cart}>
       <div className={classes.content}>
       {
