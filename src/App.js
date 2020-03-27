@@ -15,9 +15,9 @@ function App() {
 
         
           <Switch>
-            <Route path="/cart" component={Cart} />
+            <Route path="/shoppingcart/cart" component={Cart} />
            {/*  <Route path="/orders" component={Orders} /> */}
-            <Route path="/" exact component={Layout} />
+            <Route path="/shoppingcart" exact component={Layout} />
            </Switch>
         {/* <BurgerBuilder /> */}
           {/* {this.state.show ? <BurgerBuilder />: null} */}
