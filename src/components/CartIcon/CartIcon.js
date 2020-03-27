@@ -14,7 +14,7 @@ const CartIcon = ({itemCount, toggleCartHidden}) => {
       {/* <ShoppingIcon className='shopping-icon'/> */}
       {/* <FontAwesomeIcon style={{marginRight: '10px'}} icon={faSearch} /> */}
       <Search />
-      <Link to='/shoppingcart/cart' className={classes.Carticon}>
+      <Link to='/cart' className={classes.Carticon}>
         <FontAwesomeIcon icon={faShoppingCart} />
         {itemCount ? <span className={`${classes.itemcount} badge badge-warning `}>{itemCount}</span>:''}
       </Link>

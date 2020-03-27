@@ -8,7 +8,7 @@ const Logo = props => (
 
   <div className={classes.Logo} >
     {/* <img src={burgerLogo} alt="MyBurger" /> */}
-    <Link to='/shoppingcart' className={classes.Logo}>
+    <Link to='/' className={classes.Logo}>
        <FontAwesomeIcon icon={faStar} />
       </Link>
   </div>
