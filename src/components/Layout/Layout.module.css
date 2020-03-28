@@ -46,3 +46,7 @@ background: #0000e6
 .hide{
   display: none;
 }
+
+.marginbottom{
+  margin-bottom: 10px;
+}
