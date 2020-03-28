@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/shoppingcart/static/css/main.38711117.chunk.css",
-    "main.js": "/shoppingcart/static/js/main.4fe9dd25.chunk.js",
-    "main.js.map": "/shoppingcart/static/js/main.4fe9dd25.chunk.js.map",
+    "main.css": "/shoppingcart/static/css/main.5a09ef44.chunk.css",
+    "main.js": "/shoppingcart/static/js/main.379892ff.chunk.js",
+    "main.js.map": "/shoppingcart/static/js/main.379892ff.chunk.js.map",
     "runtime-main.js": "/shoppingcart/static/js/runtime-main.8d0e9c2a.js",
     "runtime-main.js.map": "/shoppingcart/static/js/runtime-main.8d0e9c2a.js.map",
     "static/css/2.f7f8fe52.chunk.css": "/shoppingcart/static/css/2.f7f8fe52.chunk.css",
-    "static/js/2.a6e9e11d.chunk.js": "/shoppingcart/static/js/2.a6e9e11d.chunk.js",
-    "static/js/2.a6e9e11d.chunk.js.map": "/shoppingcart/static/js/2.a6e9e11d.chunk.js.map",
+    "static/js/2.1a335708.chunk.js": "/shoppingcart/static/js/2.1a335708.chunk.js",
+    "static/js/2.1a335708.chunk.js.map": "/shoppingcart/static/js/2.1a335708.chunk.js.map",
     "index.html": "/shoppingcart/index.html",
-    "precache-manifest.f994adb0723fdbc874fae50a72a57102.js": "/shoppingcart/precache-manifest.f994adb0723fdbc874fae50a72a57102.js",
+    "precache-manifest.c7b4c44ab47902f8a36663c2f8367900.js": "/shoppingcart/precache-manifest.c7b4c44ab47902f8a36663c2f8367900.js",
     "service-worker.js": "/shoppingcart/service-worker.js",
     "static/css/2.f7f8fe52.chunk.css.map": "/shoppingcart/static/css/2.f7f8fe52.chunk.css.map",
-    "static/css/main.38711117.chunk.css.map": "/shoppingcart/static/css/main.38711117.chunk.css.map",
-    "static/js/2.a6e9e11d.chunk.js.LICENSE.txt": "/shoppingcart/static/js/2.a6e9e11d.chunk.js.LICENSE.txt",
+    "static/css/main.5a09ef44.chunk.css.map": "/shoppingcart/static/css/main.5a09ef44.chunk.css.map",
+    "static/js/2.1a335708.chunk.js.LICENSE.txt": "/shoppingcart/static/js/2.1a335708.chunk.js.LICENSE.txt",
     "static/media/bootstrap.min.css": "/shoppingcart/static/media/glyphicons-halflings-regular.fa277232.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.8d0e9c2a.js",
     "static/css/2.f7f8fe52.chunk.css",
-    "static/js/2.a6e9e11d.chunk.js",
-    "static/css/main.38711117.chunk.css",
-    "static/js/main.4fe9dd25.chunk.js"
+    "static/js/2.1a335708.chunk.js",
+    "static/css/main.5a09ef44.chunk.css",
+    "static/js/main.379892ff.chunk.js"
   ]
 }
