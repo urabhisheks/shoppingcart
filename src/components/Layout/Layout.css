@@ -1,0 +1,9 @@
+.Content{
+  margin-top: 72px;
+  margin-bottom: 40px;
+}
+.input-range__label-container {
+  left: -50%;
+  position: relative;
+  font-size: 14px;
+}

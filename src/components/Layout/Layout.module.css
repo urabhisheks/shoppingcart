@@ -10,3 +10,39 @@
 .applyBtn button{
 background: #0000e6
 }
+.bold{
+  font-weight: bold;
+}
+.margin{
+  margin-right:5px;
+}
+.pricemodal{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.cancel{
+  width: 50%;
+  display: inline-block;
+  border-top: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+  text-align: center;
+  padding-top: 10px;
+  color: blue;
+  font-weight: bold;
+}
+
+.apply{
+  width: 50%;
+  display: inline-block;
+  border-top: 1px solid darkgray;
+  text-align: center;
+  padding-top: 10px;
+  color: blue;
+  font-weight: bold;
+}
+.pulldown{
+  margin-top: 40%;
+}
+.hide{
+  display: none;
+}

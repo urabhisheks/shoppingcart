@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-// import Aux from '../../hoc/Aux';
 import classes from './Layout.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import {applyFilter} from '../../actions/index';
 import {connect} from 'react-redux';
 import Items from '../Items/Items';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faSort, faFilter } from '@fortawesome/free-solid-svg-icons';
+import Modal from '../Modal/Modal';
 import Sort from '../Sort/Sort';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
@@ -15,6 +17,8 @@ class Layout extends Component {
   state={
     showsideDrawer: false,
     value: { min: 200, max: 300 },
+    price:false,
+    sort:false
   }
 
   sideDrawerClosedHandler=() =>{
@@ -25,6 +29,18 @@ class Layout extends Component {
     this.setState((prevState) => ({showsideDrawer: !prevState.showsideDrawer}));
   }
 
+  displayModal = val => {
+    console.log('display Modal')
+    this.setState({[val]: true});
+  }
+
+  applyFilter = () => {
+    this.setState({price: false, sort: false});
+    this.props.applyFilter(this.state.value.min, this.state.value.max)
+  }
+  closeModal(val){
+    this.setState({[val]: false});
+  }
   render() {
     console.log('props ', this.props);
     return (
@@ -40,36 +56,44 @@ class Layout extends Component {
               onChange={value => this.setState({ value })} />
               <div className="row text-center">Price</div>
               <div className={`row text-center ${classes.applyBtn}`}>
-                <button onClick={()=>this.props.applyFilter(this.state.value.min, this.state.value.max)}>
+                <button onClick={this.applyFilter}>
                   Apply</button></div>
           </div>
           <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <div className="row text-center hidden-md hidden-lg">
               <div className="col-xs-6 col-sm-6 text-center">
-                <span data-toggle="modal" data-target="#myModal">Filter</span>
+                <span className ={classes.bold} data-toggle="modal" data-target="#myModal">
+                <FontAwesomeIcon className={classes.margin} icon={faFilter} />
+                  Filter</span>
               </div>
-              <div className="col-xs-6 col-sm-6 text-center">
-                <span data-toggle="modal" data-target="#myModal1">Sort By</span>
+              <div name='price' onClick={()=>this.displayModal('price')} >
+                <span className ={classes.bold} >
+                <FontAwesomeIcon className={classes.margin} icon={faSort}/>
+                  Sort By
+                </span>
               </div>
             </div>
           <Sort />
           <Items />
           </div>
-          
-        </div>
-        <div id="myModal" className="modal fade" role="dialog">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-body">
-            <InputRange
-              maxValue={600}
-              minValue={100}
-              value={this.state.value}
-              onChange={value => this.setState({ value })} />
+          {this.state.price && 
+            <Modal show={this.state.price} modalClosed={() => this.closeModal('price')}>
+               <div>
+                <div className={classes.pricemodal}>Filter Options</div>
+                <InputRange
+                  maxValue={600}
+                  minValue={100}
+                  value={this.state.value}
+                  onChange={value => this.setState({ value })} />
+                <div style={{fontWeight: 'bold',marginTop: '15px'}}className="row text-center">Price</div>
+                <div style={{marginTop: '30px'}}>
+                  <div className={classes.cancel} onClick={() => this.closeModal('price')}>Cancel</div>
+                  <div className={classes.apply} onClick={this.applyFilter}>Apply</div>
+                </div>
             </div>
-          </div>
+            </Modal>
+          }
         </div>
-      </div>
 
       <div id="myModal1" className="modal fade" role="dialog">
         <div className="modal-dialog">
